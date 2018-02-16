@@ -4,6 +4,7 @@
             .directive('search', function () {
                 return {
                     restrict: 'E',
+                    scope : {},
                     link: function (scope, element) {
                         scope.current = 0;
                         scope.setCurrent = function (index) {

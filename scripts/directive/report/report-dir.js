@@ -11,6 +11,7 @@
         .directive('report', function () {
             return {
                 restrict: 'E',
+                scope : {},
                 controller: 'ReportController',
                 templateUrl: 'scripts/directive/report/report.html',
             }

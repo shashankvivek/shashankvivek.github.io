@@ -46,5 +46,6 @@ Go to browser and hit > https://127.0.0.1:8000
  - The application exploits features of AngularJS like *controller, service, filters, directives,values* etc to follow the best practices of angularJS.
  - The css uses bootstrap for basic UI designs and layout , where as rather than using all third party files like `ui bootstrap tpls js` to implement typeahead feature, I have created custom directives and css file to achieve the same behavior. 
  - The UI has been kept simple to highlight more on implementation logic.
+ - Spinner has been used for graceful user data submission with server.
  - `ng-model-options="{debounce: 500}"` has been used in search-directive to reduce the continuous hit of API for every change of user input data.
  - Karma has been used as a test runner with Jasmine as the test framework.
