@@ -39,7 +39,7 @@ Go to browser and hit > https://127.0.0.1:8000
  - Test cases for all the above codes.
  - Grouping weather results with dates will make it more readable.
  - The DI in controllers and other features is not handled for minification purpose for now but it can be handled by using `ng-annotate` when minifying and uglyfying using `Gulp`
- - `ng-docs` can be used for document management.
+ - `ng-docs` can be used for documentation management.
  
 ## Technology Overview
  - The application has been written down in AngularJS 1.4
