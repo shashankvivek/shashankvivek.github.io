@@ -1,0 +1,26 @@
+<div class="container-fluid form row">
+    <input class="form-control" 
+           style="width: 30%"
+           type="text"
+           ng-model="searchText.data"
+           ng-change="changed()"
+           ng-model-options="{debounce: 500}"
+           ng-dblClick="doubleClick()"
+           placeholder="Type your location" />
+    <div class="menuItem" ng-show="valid_search_text_length && in_focus" > 
+        <div class="searchItem">
+            <div class="location-element"
+                 ng-repeat="data in result"
+                 ng-class="{'active-selection': (current === $index)}"
+                 ng-mouseenter="setCurrent($index)">
+
+                <div ng-click="selectLocation(data)">
+                    {{data.name}},{{data.country}}
+                </div>
+            </div>
+            <div class="location-element" ng-show="result.length === 0">
+                No Search result found..
+            </div>
+        </div>
+    </div>
+</div>

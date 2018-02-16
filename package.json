@@ -1,0 +1,36 @@
+{
+  "name": "weather-report",
+  "version": "1.0.0",
+  "description": "To fetch the weather details of a location",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shashankvivek/WeatherReport.git"
+  },
+  "author": "shashankvivek",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/shashankvivek/WeatherReport/issues"
+  },
+  "homepage": "https://github.com/shashankvivek/WeatherReport#readme",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "morgan": "^1.7.0",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {
+    "angular": "^1.4.0",
+    "angular-mocks": "^1.4.0",
+    "jasmine-core": "^2.99.1",
+    "karma": "^1.7.1",
+    "karma-chrome-launcher": "^2.2.0",
+    "karma-cli": "^1.0.1",
+    "karma-jasmine": "^1.1.1",
+    "karma-spec-reporter": "0.0.26"
+  }
+}
