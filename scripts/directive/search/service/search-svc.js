@@ -7,7 +7,7 @@ angular.module('weather.search').factory('SearchService',function ($http,CONSTAN
     return{
         
         getWeatherReport : function (location_id){
-            var url = 'http://api.openweathermap.org/data/2.5/forecast?id=' + location_id+ '&appid=' + CONSTANTS.APP_ID + '&units=metric';
+            var url = 'https://api.openweathermap.org/data/2.5/forecast?id=' + location_id+ '&appid=' + CONSTANTS.APP_ID + '&units=metric';
             return $http.get(url)
         },
         getLocationList : function (){
