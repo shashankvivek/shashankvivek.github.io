@@ -8,7 +8,7 @@ describe("SearchService", function () {
             service = $injector.get('SearchService');
             $httpBackend = $injector.get('$httpBackend');
 
-            $httpBackend.when('GET', "http://api.openweathermap.org/data/2.5/forecast?id=1259243&appid=93cd8d8cebc55c89b06a8f289020be1f&units=metric")
+            $httpBackend.when('GET', "https://api.openweathermap.org/data/2.5/forecast?id=1259243&appid=93cd8d8cebc55c89b06a8f289020be1f&units=metric")
                 .respond(["data1", "data2", "data3"]);
             $httpBackend.when('GET', "static/json/city.list.json")
                 .respond(["data1", "data2"]);
