@@ -17,7 +17,6 @@ describe('Search Directive', function () {
 
         event.keyCode = 27;
         element.triggerHandler(event);
-        // need to be checked
         expect($scope.in_focus).toBeFalsy();
 
     });
