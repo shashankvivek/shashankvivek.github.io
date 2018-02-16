@@ -12,7 +12,6 @@
                         };
                         element.bind("keyup", function (event) {
                             if (event.which === 27) {
-                                console.log('Koookop')
                                 scope.$apply(function () {
                                     scope.in_focus = false;
                                 });
