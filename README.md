@@ -28,6 +28,7 @@ Go to browser and hit > https://127.0.0.1:8000
  - Once all dependencies are installed, you can run the test cases using command 
 > karma start
  - You'll see the respective test cases getting passed successfully.
+ - To run using `local-web-server` , run `ws --https --spa index.html`.
  
 ## Future Improvements
  - Minify css and JS files using gulp to increase performance and decrease load time.
