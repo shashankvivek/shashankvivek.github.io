@@ -6,36 +6,11 @@ and open the template in the editor.
 -->
 <html>
     <head>
-        <title>Weather Report App</title>
+        <title>Happy Birthday</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="static/css/bootstrap.min.css">        
-        <link rel="stylesheet" href="static/css/custom.css">
     </head>
-    <body ng-app="myApp">
-        <div class="container" ng-controller="SiteController">
-            <h1>Weather Report <i class="glyphicon glyphicon-cloud"></i></h1>
-            <div class="spinner-style" ng-show="universal_spinner">
-                <img src="static/spinner.gif">
-            </div>
-            <div ng-class="{true: 'customOverlay'} [universal_spinner]">
-                <hr>
-                <search></search>
-                <hr>
-                <report></report>
-            </div>
-
-        </div>
+    <body >
+        <h1>test</h1>
     </body>
-    <script type="text/javascript" src="static/js/angular.js"></script>
-    <script type="text/javascript" src="static/js/underscore-min.js"></script>
-
-    <script type="text/javascript" src="scripts/directive/search/search-dir.js"></script>    
-    <script type="text/javascript" src="scripts/directive/search/service/search-svc.js"></script>     
-    <script type="text/javascript" src="scripts/directive/search/controller/search-controller.js"></script>     
-
-    <script type="text/javascript" src="scripts/directive/report/report-dir.js"></script>   
-    <script type="text/javascript" src="scripts/script.js"></script>         
-    <script type="text/javascript" src="scripts/filter/date-time-filter.js"></script>  
-    <script type="text/javascript" src="scripts/controller/site-controller.js"></script>
 </html>
