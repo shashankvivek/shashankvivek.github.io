@@ -1,4 +1,4 @@
-angular.module('myApp', []).controller('MyCtrl',['$scope', '$window', $q, function($scope, $window, $q) {
+angular.module('myApp', []).controller('MyCtrl',['$scope', '$window',  function($scope, $window) {
     $scope.choices = [{ name: 'Mukka' }, { name: 'Kutai' }, { name: '5 Star' }, { name: 'None of the above' }];
     $scope.value = [];
 
