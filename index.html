@@ -1,0 +1,337 @@
+<head>
+    <title>Happy Birthday</title>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"
+          href="bootstrap.min.css">
+    <link rel="stylesheet"
+          href="style.css">
+    <script src="underscore-min.js"></script>
+    <script src="angular.min.js"></script>
+    <script src="app.js"></script>
+</head>
+
+<body ng-app="myApp">
+    <div ng-controller="MyCtrl"
+         class="container-fluid">
+        <div id="login">
+            <div class="container1">
+                <div id="login-row"
+                     class="row justify-content-center align-items-center">
+                    <div id="login-column">
+                        <div id="login-box">
+                            <form id="login-form"
+                                  name="bdayForm"
+                                  class="form"
+                                  ng-submit="submit(bdayForm.$valid)"
+                                  novalidate>
+                                <h3 class="text-center text-info">Birthday Evaluation Test - 2018</h3>
+                                <div class="form-group required">
+                                    <label for="fname"
+                                           class="text-info">Whats your first name:</label>
+                                    <br>
+                                    <input type="text"
+                                           name="fname"
+                                           id="fname"
+                                           required
+                                           ng-model="fname"
+                                           class="form-control">
+                                </div>
+                                <div class="form-group required">
+                                    <label for="lname"
+                                           class="text-info">Whats your last name</label>
+                                    <br>
+                                    <input type="text"
+                                           name="lname"
+                                           id="lname"
+                                           required
+                                           ng-model="lname"
+                                           class="form-control">
+                                </div>
+                                <div class="form-group required">
+                                    <label for="remember-me"
+                                           class="text-info">
+                                        Select one of the below about your self:
+                                    </label>
+                                        <p>
+                                            <span>
+                                                <input name="act1"
+                                                       ng-model="act1"
+                                                       required
+                                                       value="I am smart"
+                                                       type="radio">&nbsp;I am smart
+                                            </span>
+                                            <br>
+                                            <span>
+                                                <input name="act1"
+                                                       required
+                                                       ng-model="act1"
+                                                       value="I am ganda wala smart"
+                                                       type="radio">&nbsp;I am ganda
+                                                wala smart
+                                            </span>
+                                            <br>
+                                            <span>
+                                                <input name="act1"
+                                                       required
+                                                       ng-model="act1"
+                                                       value="I am lolu"
+                                                       type="radio">&nbsp;I am lolu
+                                            </span>
+                                            <br>
+                                            <span>
+                                                <input name="act1"
+                                                       required
+                                                       ng-model="act1"
+                                                       value="4"
+                                                       type="radio">&nbsp;I am ganda
+                                                wala lolu
+                                            </span>
+                                </div>
+                                <div class="form-group required">
+                                    <label for="remember-me"
+                                           class="text-info">
+                                        How to control Rangu ka Jaljala:
+                                    </label>
+                                        <p>
+                                            <span ng-repeat="choice in choices">
+                                                <input name="act2"
+                                                       ng-required="jaljalaData.length === 0"
+                                                       value="{{choice.name}}"
+                                                       ng-model="choice.checked"
+                                                       ng-change="jaljalaUpdated(choice)"
+                                                       type="checkbox">&nbsp;{{choice.name}}
+                                                <br>
+                                            </span>
+                                </div>
+                                <div class="form-group required">
+                                    <label for="remember-me"
+                                           class="text-info">
+                                        Select the correct Option:
+                                    </label>
+                                        <p>
+                                            <span>
+                                                <input name="act3"
+                                                       ng-model="act3"
+                                                       required
+                                                       value="Guppy Rocks"
+                                                       type="radio">&nbsp;Guppy
+                                                Rocks
+                                            </span>
+                                            <br>
+                                            <span>
+                                                <input name="act3"
+                                                       ng-model="act3"
+                                                       required
+                                                       value="Gym Boy Rocks"
+                                                       type="radio">&nbsp;Gym Boy
+                                                Rocks
+                                            </span>
+                                </div>
+                                <div class="form-group required">
+                                    <label for="remember-me"
+                                           class="text-info">
+                                        Rate your smartness on the scale of 0 - 10?
+                                    </label>
+                                        <p>
+                                            <span>
+                                                <input name="act4"
+                                                       ng-model="act4"
+                                                       required
+                                                       value="(49*56.2)-2752"
+                                                       type="radio">&nbsp;(49*56.2)-2752
+                                            </span>
+                                            <br>
+                                            <span>
+                                                <input name="act4"
+                                                       ng-model="act4"
+                                                       required
+                                                       value="1"
+                                                       type="radio">&nbsp;1
+                                            </span>
+                                            <br>
+                                            <span>
+                                                <input name="act4"
+                                                       ng-model="act4"
+                                                       required
+                                                       value="((8006+456)/4231)"
+                                                       type="radio">&nbsp;((8006+456)/4231)
+                                            </span>
+                                            <br>
+                                            <span>
+                                                <input name="act4"
+                                                       ng-model="act4"
+                                                       required
+                                                       value="((845*34)/28730)-0.9"
+                                                       type="radio">&nbsp;((845*34)/28730)-0.9
+                                            </span>
+                                </div>
+                                <div class="form-group required">
+                                    <label for="username"
+                                           class="text-info">2 + 2 =</label>
+                                    <br>
+                                    <input type="number"
+                                           name="cal"
+                                           id="cal"
+                                           ng-model="sum"
+                                           required
+                                           class="form-control">
+                                </div>
+                                <div class="form-group required">
+                                    <label for="remember-me"
+                                           class="text-info">
+                                        Whats the ideal speed of Surrrr that Guppy should achieve to get her things done.
+                                        
+                                    </label><p>
+                                            <span>
+                                                <input name="act5"
+                                                       ng-model="act5"
+                                                       required
+                                                       value="20"
+                                                       type="radio">&nbsp;20 Km/Hr
+                                            </span>
+                                            <br>
+                                            <span>
+                                                <input name="act5"
+                                                       ng-model="act5"
+                                                       required
+                                                       value="120"
+                                                       type="radio">&nbsp;120 Km/hr
+                                            </span>
+                                            <br>
+                                            <span>
+                                                <input name="act5"
+                                                       ng-model="act5"
+                                                       required
+                                                       value="60"
+                                                       type="radio">&nbsp;60Km/hr
+                                            </span>
+                                            <br>
+                                            <span>
+                                                <input name="act5"
+                                                       ng-model="act5"
+                                                       value="180"
+                                                       required
+                                                       type="radio">&nbsp;180 Km/hr
+                                            </span>
+                                </div>
+                                <div class="form-group required">
+                                    <label for="remember-me"
+                                           class="text-info">
+                                        Weight range for guppy(considering Poty effect)
+                                    </label>
+                                        <p>
+                                            <span>
+                                                <input name="act6"
+                                                       ng-model="act6"
+                                                       required
+                                                       value="1"
+                                                       type="radio">&nbsp;44-56
+                                                kgs
+                                            </span>
+                                            <br>
+                                            <span>
+                                                <input name="act6"
+                                                       ng-model="act6"
+                                                       required
+                                                       value="2"
+                                                       type="radio">&nbsp;55-65
+                                                kgs
+                                            </span>
+                                            <br>
+                                            <span>
+                                                <input name="act6"
+                                                       ng-model="act6"
+                                                       required
+                                                       value="3"
+                                                       type="radio">&nbsp;58-62
+                                                kgs
+                                            </span>
+                                </div>
+                                <div class="form-group required">
+                                    <label for="remember-me"
+                                           class="text-info">
+                                        How does Guppy measure love ?
+                                    </label>
+                                        <p>
+                                            <span>
+                                                <input name="act7"
+                                                       ng-model="act7"
+                                                       required
+                                                       value="Using feet"
+                                                       type="radio">&nbsp;Using
+                                                feet
+                                            </span>
+                                            <br>
+                                            <span>
+                                                <input name="act7"
+                                                       ng-model="act7"
+                                                       required
+                                                       value="Using Km/hr"
+                                                       type="radio">&nbsp;Using
+                                                Km/hr
+                                            </span>
+                                            <br>
+                                            <span>
+                                                <input name="act7"
+                                                       ng-model="act7"
+                                                       required
+                                                       value="Using kg-m/sec^2"
+                                                       type="radio">&nbsp;Using
+                                                kg-m/sec^2
+                                            </span>
+                                            <br>
+                                            <span>
+                                                <input name="act7"
+                                                       ng-model="act7"
+                                                       required
+                                                       value="Using pipe of radius r"
+                                                       type="radio">&nbsp;Using
+                                                pipe of radius "r"
+                                            </span>
+                                </div>
+                                <div class="form-group required">
+                                    <label for="remember-me"
+                                           class="text-info">
+                                        <span>
+                                            <input name="check1"
+                                                   ng-model="check1"
+                                                   required
+                                                   type="checkbox">
+                                        </span>
+                                        <span>
+                                            I'll not watch chocolate videos on Facebook
+                                        </span>
+                                    </label>
+                                    <p></p>
+                                    <label for="remember-me"
+                                           class="text-info">
+                                        <span>
+                                            <input name="check2"
+                                                   ng-model="check2"
+                                                   required
+                                                   type="checkbox">
+                                        </span>
+                                        <span>
+                                            I lauu Poty
+                                        </span>
+                                    </label>
+                                    <br>
+                                    <hr>
+                                    <input type="submit"
+                                           name="submit"
+                                           ng-disabled="bdayForm.$invalid"
+                                           class="btn btn-info btn-md"
+                                           value="Submit">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
