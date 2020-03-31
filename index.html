@@ -41,7 +41,7 @@
 
 </head>
 
-<body id="page-top">
+<body id="page-top" ng-app="myApp">
 
   <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top"
        id="sideNav">
@@ -100,7 +100,7 @@
 
   <div class="container-fluid p-0">
 
-    <section class="resume-section p-3 p-lg-5 d-flex align-items-center"
+    <section ng-controller="UserCtrl as uc" class="resume-section p-3 p-lg-5 d-flex align-items-center"
              id="about">
       <div class="w-100">
         <h1 class="mb-0">Shashank
@@ -114,26 +114,37 @@
           me.</p>
         <p class="lead mb-5">I am a firm believer of sharing knowledge and I try to give back to the community via
           StackOverflow. My achievements in <a href="https://stackoverflow.com/story/shashankvivek"
-             target="blank">stackoverflow (9,200+)</a>:
+             target="blank">stackoverflow ( {{uc.rep|number : fractionSize}} )</a>:
 
           <ul class="fa-ul mb-0">
             <li>
               <i class="fa-li fa fa-trophy"></i>
-              World's Top 1% for Angular
+              World's Top <b>1%</b> for Angular
             </li>
             <li>
               <i class="fa-li fa fa-trophy"></i>
-              World's Top 5% for Angular JS, TypeScript, JavaScript , Karma & Jasmine
+              World's Top <b>5%</b> for Angular JS, TypeScript, JavaScript , Karma & Jasmine
             </li>
             <li>
               <i class="fa-li fa fa-trophy"></i>
-              World's Top 10% for HTML
+              World's Top <b>10%</b> for HTML
             </li>
             <li>
               <i class="fa-li fa fa-trophy"></i>
-
+              Gold badges: <b>{{uc.gold}} </b>
+            </li>
+            <li>
+              <i class="fa-li fa fa-trophy"></i>
+              Silver badges: <b>{{uc.silver}} </b>
+            </li>
+            <li>
+              <i class="fa-li fa fa-trophy"></i>
+              Bronze badges: <b>{{uc.bronze}} </b>
+            </li>
+            <li>
+              <i class="fa-li fa fa-trophy"></i>
               <a href="https://data.stackexchange.com/stackoverflow/query/817587/list-of-most-reputed-users-in-a-given-location-case-sensitive?Top=80&Location=Pune"
-                 target="blank">With 9,200+ reputation, I am among top 70 Users in Pune, India </a>
+                 target="blank">With {{uc.rep| number : fractionSize}} reputation, I am among top 70 Users in Pune, India </a>
             </li>
           </ul>
         </p>
@@ -464,6 +475,16 @@
 
   <!-- Custom scripts for this template -->
   <script src="js/resume.min.js"></script>
+  
+  <script src="advance_editor_change_tracker/angular.js"></script>
+  <script src="advance_editor_change_tracker/app.js"></script>
+  <script src="advance_editor_change_tracker/js/leaf.js">
+  </script><script src="advance_editor_change_tracker/ui-bootstrap-tpls.js"></script>
+  <script src="advance_editor_change_tracker/js/component/leaf.component.js"></script>
+  <script src="advance_editor_change_tracker/js/directive/file.watcher.dir.js"></script>
+  <script src="advance_editor_change_tracker/js/controller/img.upload.ctrl.js"></script>
+  <script src="advance_editor_change_tracker/js/controller/table-generator.ctrl.js"></script>
+  <script src="advance_editor_change_tracker/js/service/leaf.util.svc.js"></script>
 
 </body>
 

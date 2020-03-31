@@ -8,3 +8,14 @@ app.controller('MainCtrl',function($scope){
 //	this.userTxt = "Hi There <b>Shashank Vivek.</b><br><br>Follow below steps to enter into office premises:<br><br>&nbsp;1.&nbsp; Get your bag checked<br>&nbsp;2.&nbsp; Show your ID card.<br>&nbsp;3. Swap<u> your card to open the door</u>.<br>&nbsp;4. <i>Go to your desk and switch on the <b>machine.</b></i>";
 })
 		
+
+app.controller('UserCtrl',function($scope,$http){
+	$http.get("https://api.stackexchange.com/2.1/users/3092377?order=desc&sort=reputation&site=stackoverflow").then(res => {
+		this.rep = res.data.items[0].reputation;
+		this.gold = res.data.items[0].badge_counts.gold;
+		this.silver = res.data.items[0].badge_counts.silver;
+		this.bronze = res.data.items[0].badge_counts.bronze;
+	},err => {
+		alert('There was some error loading reputation from stackoverflow site')
+	})
+})
