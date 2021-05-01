@@ -5,7 +5,9 @@
  */
 
 body {
-  font-family: 'Muli', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  font-family: "Muli", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol", "Noto Color Emoji";
   padding-top: 54px;
   color: #c4c7ca;
 }
@@ -23,7 +25,9 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Saira Extra Condensed', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  font-family: "Saira Extra Condensed", -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-weight: 700;
   text-transform: uppercase;
   color: #696d70;
@@ -50,7 +54,9 @@ p.lead {
 .subheading {
   text-transform: uppercase;
   font-weight: 500;
-  font-family: 'Saira Extra Condensed', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  font-family: "Saira Extra Condensed", -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-size: 1.5rem;
 }
 
@@ -80,7 +86,7 @@ p.lead {
 }
 
 .dev-icons .list-inline-item i:hover {
-  color: #BD5D38;
+  color: #bd5d38;
 }
 
 #sideNav .navbar-nav .nav-item .nav-link {
@@ -156,7 +162,7 @@ section.resume-section {
   background-color: #222224;
 }
 
-.container-fluid{
+.container-fluid {
   background-color: #222224;
 }
 
@@ -185,25 +191,36 @@ section.resume-section .resume-item .resume-date {
 }
 
 .text-primary {
-  color: #F4B41A !important;
+  color: #f4b41a !important;
 }
 
 a {
-  color: #F4B41A;
+  color: #f4b41a;
 }
 
-a:hover, a:focus, a:active {
+a:hover,
+a:focus,
+a:active {
   color: #c96232;
 }
 
-.duration{
+.duration {
   font-weight: bold;
 }
 
-.text-warning{
+.text-warning {
   color: #cf9e0c !important;
 }
 
-b{
+b {
   color: #c96232;
+}
+
+.so-image {
+  border: 0.5rem solid rgba(255, 255, 255, 0.2);
+  width: 224px;
+  box-shadow: #ceb650 0px 0px 15px 5px;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  border-radius: 5px;
 }
