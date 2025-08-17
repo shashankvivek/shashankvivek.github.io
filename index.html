@@ -25,7 +25,39 @@
   <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
 
   <link href="css/resume.css" rel="stylesheet">
+    <style>
+      .iframe-container {
+      position: relative;
+      width: 100%;
+      height: 600px; /* adjust as needed */
+      border-radius: 12px;
+      overflow: hidden;
+    }
 
+    .iframe-container iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    /* Overlay div */
+    .overlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 7%;
+      background: black;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 24px;
+      font-weight: bold;
+      z-index: 10;
+    }
+
+    </style>
 </head>
 
 <body id="page-top" ng-app="myApp">
@@ -79,6 +111,13 @@
             <a href="mailto:shashankvivek.7@gmail.com">shashankvivek.7@gmail.com</a>
           </p>
         </div>
+        
+           <h2>Ask about me to my virtual assistant</h2>
+
+          <div class="iframe-container">
+    <iframe src="https://shashankvivek-career-conversation.hf.space"></iframe>
+    <div class="overlay"> 🤖 </div>
+  </div>
         <p class="lead mb-5">With over decade of experience in software development, I am passionate about crafting innovative solutions that impact users globally. My journey has been driven by a continuous pursuit of excellence in technology and a dedication to sharing knowledge within the developer community.</p>
 
         <p class="lead mb-5">I am deeply committed to knowledge-sharing, actively contributing to platforms like StackOverflow  and Medium . My contributions aim to enrich collective understanding and foster a culture of collaboration and continuous learning.
@@ -142,6 +181,7 @@
           <a href="https://shashankvivek-7.medium.com/" target="_blank" aria-label="Medium Profile">
             <i class="fab fa-medium"></i>
           </a>
+
           <!-- <a href="https://stackoverflow.com/users/3092377/shashank-vivek#assessment-8586199" target="_blank" aria-label="Stack Overflow Assessments">
             <span class="icon lightStar">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 97.319329 97.318793">
